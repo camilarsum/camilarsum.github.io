@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>个人资料</title>
-    <link rel="stylesheet" href="css/mobiscroll.custom-2.5.2.min.css">
+    <link rel="stylesheet" href="css/mobiscroll.custom-2.17.0.min.css">
     <link rel="stylesheet" href="css/personal.css">
     <script type="text/javascript" src="js/jQuery.js"></script>
-    <script type="text/javascript" src="js/mobiscroll.custom-2.5.2.min.js"></script>
+    <script type="text/javascript" src="js/mobiscroll.custom-2.17.0.min.js"></script>
     <script type="text/javascript" src="js/personal.js"></script>
-
+    <script type="text/javascript">
+        var phoneScale = parseInt(window.screen.width)/640;
+        document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +'">');
+    </script>
 </head>
 <body>
     <div class="title">
@@ -17,35 +21,45 @@
             我的资料
         </p>
     </div>
-    <div class="column">头像
+    <div class="column">
+        <label for="colImg">头像</label>
         <div class="colLeft">
-            <img src="img/2.jpg" alt="" class="colImg">
+            <input type="file" id="changeImg" class="changeImg">
+            <img src="img/male.jpg" id="colImg" alt="" class="colImg">
         </div>
     </div>
-    <div class="column">姓名
+    <div class="column">
+        <label for="name">姓名</label>
         <div class="colLeft">
-            <input type="text" value="请输入昵称" dir="rtl" onfocus="this.value=''" onblur="if(this.value==''){this.value='请输入昵称'}">
+            <input type="text" id="name" placeholder="请输入昵称" >
         </div>
     </div>
-    <div class="column">性别
+    <div class="column">
+        <label for="gender">性别</label>
         <div class="colLeft">
-            <ul id="treelist">
-                <li>男</li>
-                <li>女</li>
-            </ul>
+            <select name="gender" id="gender">
+                <option value="1">男</option>
+                <option value="2">女</option>
+            </select>
         </div>
     </div>
-    <div class="column">生日
+    <div class="column">
+        <label for="birthday">生日</label>
         <div class="colLeft">
-            <label for="appDate"></label>
-            <input type="text" name="appDate" id="appDate" placeholder="您的破壳日"/>
+            <input  id="birthday" placeholder="您的破壳日"/>
         </div>
     </div>
-    <div class="column">身高(cm)
-        <div class="colLeft">168</div>
+    <div class="column">
+        <label for="pHeight">身高(cm)</label>
+        <div class="colLeft">
+            <input id="pHeight" placeholder="请输入身高" />
+        </div>
     </div>
-    <div class="column">体重(kg)
-        <div class="colLeft">60</div>
+    <div class="column">
+        <label for="pWeight">体重(kg)</label>
+        <div class="colLeft">
+            <input id="pWeight" placeholder="请输入体重" />
+        </div>
     </div>
     <div class="column">用户ID
         <div class="colLeft">1605161032358790</div>

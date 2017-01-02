@@ -1,85 +1,143 @@
-body,html,p{
-    margin:0;
-    padding:0;
+/*去样式*/
+body,html,p,a,input,ul,li{
+    padding: 0;
+    margin: 0;
+    border: none;
+    list-style: none;
 }
+/*定义页面宽度*/
 body{
+    width: 640px;
     background:#E8E8E8;
+    font-family:"宋体";
 }
 
-/*标题栏*/
+/*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/
+a,button,input,optgroup,select,textarea {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+input:disabled{
+    background-color:rgba(0,0,0,0);
+}
+ /*标题*/
 .title{
     width:100%;
-    height:120px;
-    background-color: dodgerblue;
+    height:70px;
+    background-color: #0066ff;
     color: #fff;
-    line-height: 120px;
+    line-height: 70px;
 }
 .title .return{
     display: inline-block;
     position: absolute;
     left: 10px;
-    width:100px;
-    font-size:80px;
-/*    padding-left:20px;*/
+    width:50px;
+    font-size:50px;
 }
 
 .title .myTitle{
     float: left;
     width:100%;
     text-align: center;
-    font-size:60px;
+    font-size:35px;
 }
+/*!*栏目组*!*/
+ .column{
+     width: 88%;
+     height:3.2em;
+     line-height: 3.2em;
+     font-size:25px;
+     background-color:#fff ;
+     margin:0.5em auto;
+     border-left: 0.6em solid #989898;
+     padding-left: 1em;
+     color: #000;
+     font-weight:bold;
 
-/*栏目组*/
-.column{
-    width: 90%;
-    height:120px;
-    line-height: 120px;
-    font-size:45px;
-    background-color:#fff ;
-    margin:25px auto;
-    border-left: 30px solid #989898;
-    padding-left: 20px;
-    color: #000;
-    
-}
+ }
 
 .colLeft{
     float: right;
-    padding-right: 40px;
-    height:120px;
+    padding-right: 1em;
+    height: 3.2em;
     text-align: left;
 }
 
 .colImg{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 110px;
-    height:110px;
+    padding-top: 0.1em;
+    padding-bottom:  0.1em;
+    width: 3em;
+    height: 3em;;
     border-radius: 50%;
+}
+.changeImg{
+    display: none;
 }
 
 .colLeft input{
     border-width:0px ;
-    height:120px;
-    line-height: 120px;
-    font-size:45px;
-    width:220px;
-    outline:none
+    height:3.2em;
+    font-size: 1em;
+    line-height: 3.2em;
+    width:6em;
+    outline:none;
+    text-align: right;
+    font-weight:bold;
 }
+#treelist li{
+    height:3.2em;
+    font-size: 1em;
+    line-height: 3.2em;
+
+}
+/*页底，确认框*/
 .confirm{
     width:100%;
-    height:150px;
-    background-color: dodgerblue;
+    font-size:46px;
+    height: 2em;
+    background-color: #0066ff;
     color: #fff;
-    line-height: 150px;
-    position: absolute;
+    line-height: 2em;
+    position: fixed;
     bottom:0px;
     text-align: center;
-    font-size:60px;
+
 }
 
-.mbsc-android-holo .dwv {text-align: left;tab-index: 2em;  }
+
+/*弹出框样式设置*/
+/*标题*/
+.mbsc-mobiscroll .dwv{
+    height: 2em;
+    line-height: 2em;
+    font-size: 26px;
+    font-weight:bold;
+}
+
+/*中间*/
+.dww .dw-li{
+    font-size: 32px;
+
+}
+
+
+
+
+
+/*底部*/
+.mbsc-mobiscroll .dwbc{
+    /*border-top:1px solid #31b6e7;*/
+}
+ .dw .dwb{
+    height: 2.2em;
+    line-height:2.2em;
+    font-size: 30px;
+    /*color: #31b6e7;*/
+    font-weight:bold;
+     padding-left: 1.5em;
+     padding-right: 1.5em;
+}
+
 
 
 
